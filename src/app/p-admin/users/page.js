@@ -4,22 +4,22 @@ import React from 'react'
 import userModel from '@/models/user'
 import Titles from '@/components/templates/p-admin/Titles'
 
-const page =async () => {
-    const users = await userModel.find({})
-    console.log('allusers=>', users);
-    
-    
+const page = async () => {
+  const users = await userModel.find({})
+
+
+
   return (
     <AdminPanelLayout>
-      <Titles title='کاربران'/>
+      <Titles title='کاربران' />
       <div className="mycontainer ">
-      {
-        users.length === 0  ? (
-        <div className='w-full h-[80px] bg-red-700 text-white flex justify-center items-center text-2xl mt-20'>
-         <p>هیچ کاربری وجود ندارد</p>  
-        </div>) :(<UsersTable   users={JSON.parse(JSON.stringify(users))}  />)
-      }
-        
+        {
+          users.length === 0 ? (
+            <div className='w-full h-[80px] bg-red-700 text-white flex justify-center items-center text-2xl mt-20'>
+              <p>هیچ کاربری وجود ندارد</p>
+            </div>) : (<UsersTable users={JSON.parse(JSON.stringify(users))} />)
+        }
+
       </div>
     </AdminPanelLayout>
   )

@@ -4,21 +4,21 @@ import AccountDetail from '@/components/templates/p-user/AccountDetail'
 import { authUser } from '@/utils/serverHelpers'
 import { IoAlert } from 'react-icons/io5'
 
-const page =async () => {
-  const user= await authUser()
+const page = async () => {
+  const user = await authUser()
 
   return (
     <>
-    <UserPanelLayout>
-    <UserPanelAlert
-        icon={<IoAlert className="text-white" />}
-        title=" حساب کاربری من "
+      <UserPanelLayout>
+        <UserPanelAlert
+          icon={<IoAlert className="text-white" />}
+          title=" حساب کاربری من "
 
-      />
+        />
 
-      <AccountDetail  user={JSON.parse(JSON.stringify(user))} />
+        <AccountDetail user={JSON.parse(JSON.stringify(user))} />
 
-    </UserPanelLayout>
+      </UserPanelLayout>
 
 
     </>

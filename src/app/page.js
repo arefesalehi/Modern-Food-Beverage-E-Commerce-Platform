@@ -1,5 +1,4 @@
 import Footer from '@/components/modules/footer/Footer'
-import Navbar from '@/components/modules/navbar/Navbar'
 import Banner from '@/components/templates/index/Banner/Banner'
 import BestSeller from '@/components/templates/index/bestSeller/BestSeller'
 import CustomerComments from '@/components/templates/index/customerComments/CustomerComments'
@@ -15,8 +14,6 @@ import productModel from '@/models/product'
 import menuModel from '@/models/menu'
 import commentModel from '@/models/comment'
 import newsModel from '@/models/news'
-import Drawer from '@/components/templates/index/drawer/Drawer'
-import { CartProvider } from '@/context/Cartcontex'
 import ShoppingMenue from '@/components/modules/shoppingMenu/ShoppingMenue'
 import connectToDB from '@/configs/db'
 
@@ -24,34 +21,22 @@ import connectToDB from '@/configs/db'
 const page = async () => {
 
   await connectToDB()
-  
-
-  const user = await authUser() 
-  console.log('user homepage=>', user);
-
+  const user = await authUser()
   const products = await productModel.find({})
-  // console.log('products=>', products);
- 
   const menus = await menuModel.find({})
-  // console.log('menus=>', menus);
-
   const comments = await commentModel.find({})
   const newses = await newsModel.find({})
 
 
-
-
-  
-
   return (
     <>
 
-      <ShoppingMenue/>
+      <ShoppingMenue />
       <Banner />
       <Menu menus={JSON.parse(JSON.stringify(menus))} />
       <Promote />
       <ZoomImage />
-      <BestSeller  user={user}  products={JSON.parse(JSON.stringify(products || []))} />
+      <BestSeller user={user} products={JSON.parse(JSON.stringify(products || []))} />
       <CustomerComments comments={JSON.parse(JSON.stringify(comments))} />
       <UniqueProduct user={JSON.parse(JSON.stringify(user || {}))} products={JSON.parse(JSON.stringify(products))} />
       <Promote2 />

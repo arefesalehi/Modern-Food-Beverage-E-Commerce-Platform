@@ -7,7 +7,7 @@ import ScrollToTop from "@/utils/scrollToTop";
 import { CartProvider } from "@/context/Cartcontex";
 import connectToDB from "@/configs/db";
 import wishlistModel from '@/models/wishlist'
-import { usePathname } from "next/navigation";
+
 
 export const metadata = {
   title: "فروشگاه مواد غذایی- بوتونیکا",
@@ -29,7 +29,7 @@ export default async function RootLayout({ children }) {
   connectToDB()
 
 
-  console.log('wishlist User=>', user)
+
   if (user) {
     wishes = await wishlistModel
       .find({ user: user._id })
@@ -58,9 +58,9 @@ export default async function RootLayout({ children }) {
           <Navbar isLogin={user ? true : false} wishes={JSON.parse(JSON.stringify(wishes))} />
           {children}
           <ToastContainer />
-          <ScrollToTop /> 
+          <ScrollToTop />
         </CartProvider>
-        
+
       </body>
     </html>
   );

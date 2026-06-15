@@ -3,7 +3,6 @@
 
 'use client'
 import Image from 'next/image'
-import Navbar from '@/components/modules/navbar/Navbar'
 import Stepper from '@/components/templates/cart/Stepper'
 import Footer from '@/components/modules/footer/Footer'
 import { useEffect, useState } from 'react'

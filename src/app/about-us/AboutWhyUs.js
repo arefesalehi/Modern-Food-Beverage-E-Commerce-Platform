@@ -18,9 +18,9 @@ const AboutWhyUs = () => {
         </span>
         <span className="basis-1/2 ">
           <Image
-         
-         
-           alt='pic'
+
+
+            alt='pic'
             src="/images/swipe-for-shopping.gif"
             width={913}
             height={661}

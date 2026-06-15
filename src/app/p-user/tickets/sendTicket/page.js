@@ -6,9 +6,6 @@ import departmentModel from '@/models/department'
 import subdepartmentModel from '@/models/subDepartment'
 const page = async() => {
 
-
-  
-  
   return (
     <UserPanelLayout>
       <UserPanelAlert
@@ -18,7 +15,6 @@ const page = async() => {
       />
 
      <SendTicket   />
-
    
     </UserPanelLayout>
   )

@@ -5,7 +5,7 @@ import productModel from '@/models/product'
 import AddProduct from '@/components/templates/p-admin/AddProduct'
 const page = async () => {
   const products = await productModel.find({})
-  console.log('products===>', products)
+
 
   return (
     <AdminPanelLayout>

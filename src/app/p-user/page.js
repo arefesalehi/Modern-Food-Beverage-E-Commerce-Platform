@@ -18,8 +18,6 @@ import PishkhanOrderBox from '@/components/templates/p-user/PishkhanOrderBox'
 const page = async () => {
 
   const user = await authUser()
-  console.log('userpanel user=>', user)
-
   const comments = await commentModel.find({ user: String(user?._id) })
   const wishlists = await wishlistModel.find({ user: user?._id })
   const tickets = await ticketModel.find({ user: user?._id, isAnswer: false })

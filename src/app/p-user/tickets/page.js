@@ -11,7 +11,7 @@ const page = () => {
         icon={<FaBell className="text-white" />}
         title="همه تیکت ها "
         link=" ارسال تیکت جدید  "
-        // to={`/p-user/tickets/sendTicket`}
+    
       />
 
   

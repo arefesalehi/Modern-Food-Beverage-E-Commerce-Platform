@@ -7,12 +7,9 @@ import Titles from '@/components/templates/p-admin/Titles'
 
 const page =async () => {
 
-
     const discount = await discountModel.find({}).sort({_id:-1})
-    console.log('discount=>', discount);
     
 
-    
   return (
     <>
 

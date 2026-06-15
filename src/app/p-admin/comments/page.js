@@ -5,19 +5,17 @@ import connectToDB from '@/configs/db'
 import commentModel from '@/models/comment'
 
 
-const page =async () => {
-connectToDB()
+const page = async () => {
+  connectToDB()
   const comments = await commentModel.find({}).populate('productID')
-  console.log('commentsssssssssss=>', comments);
-  
 
   return (
     <AdminPanelLayout>
-     <Titles title='کامنت ها' />
-    <div className='mycontainer'>
-    <CommentTable comments={JSON.parse(JSON.stringify(comments))}  />
-    </div>
-        
+      <Titles title='کامنت ها' />
+      <div className='mycontainer'>
+        <CommentTable comments={JSON.parse(JSON.stringify(comments))} />
+      </div>
+
     </AdminPanelLayout>
   )
 }

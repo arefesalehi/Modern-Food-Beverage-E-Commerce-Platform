@@ -31,7 +31,7 @@ const page = () => {
                   </Link>
                 </div>
                 <Link
-                
+
                   href={'/login-register'}
                   className="text-center text-black flex justify-center mt-2 cursor-pointer"
                 >
@@ -48,7 +48,7 @@ const page = () => {
             className="w-full h-screen"
             width={500}
             height={800}
-             alt='pic'
+            alt='pic'
           />
         </span>
       </div>

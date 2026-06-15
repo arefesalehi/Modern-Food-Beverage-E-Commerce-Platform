@@ -3,9 +3,7 @@ import Answer from '@/components/templates/p-user/Answer'
 import { authUser } from '@/utils/serverHelpers'
 import Image from 'next/image'
 import ticketModel from '@/models/ticket'
-import { PathParamsContext } from 'next/dist/shared/lib/hooks-client-context.shared-runtime'
 import connectToDB from '@/configs/db'
-
 
 const page = async ({ params }) => {
 
@@ -13,12 +11,12 @@ const page = async ({ params }) => {
   const ticketId = params.id
   connectToDB()
   const tickets = await ticketModel.findOne({ _id: ticketId }).populate('user', "name role").lean()
-  console.log('tickets', tickets);
+
 
   const answerTicket = await ticketModel.findOne({ mainTicket: tickets._id })
     .populate('user', 'name role')
     .populate('mainTicket')
-  console.log('answeTicket===>', answerTicket);
+
 
 
   return (
@@ -27,10 +25,7 @@ const page = async ({ params }) => {
         <div className="flex flex-col mt-10 mr-5 ml-5">
           <div className='flex'>
             <div className="w-1/2 h-auto mb-5">
-
               <Answer type='user' tickets={JSON.parse(JSON.stringify(tickets))} />
-
-
             </div>
 
             <div className="w-1/2">

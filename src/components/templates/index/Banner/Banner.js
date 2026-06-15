@@ -266,7 +266,7 @@ import { Navigation, Autoplay, Pagination } from 'swiper/modules'
 const Banner = () => {
   return (
     <>
-      <div className="w-full   xl:h-[1000px] lg:h-[700px] md:h-[600px] sm:h-[640px] h-[560px]  bg-red-500 relative   ">
+      <div className="w-full   xl:h-[1000px] lg:h-[700px] md:h-[600px] sm:h-[640px] h-[560px] relative   ">
         <Swiper
           className=" lg:h-[700px]  md:h-[600px] sm:h-[640px] h-[560px]  xl:h-[1000px]   "
           style={{

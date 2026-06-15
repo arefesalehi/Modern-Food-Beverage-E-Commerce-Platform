@@ -1,8 +1,6 @@
 import AllBreadCrumb from '@/components/modules/AllBreadCrumb/AllBreadCrumb'
 import Detailbar from '@/components/modules/detailBar/Detailbar'
-import Navbar from '@/components/modules/navbar/Navbar'
 import FilterShop from '@/components/templates/shop/FilterShop'
-
 import ShopSlider from '@/components/templates/shop/ShopSlider'
 import React from 'react'
 import menuModel from '@/models/menu'
@@ -21,7 +19,6 @@ const page = async () => {
   return (
     <>
       <div className="w-full bg-black h-[100px]">
-        {/* <Navbar /> */}
       </div>
       <Detailbar />
       <AllBreadCrumb route='فروشگاه' />

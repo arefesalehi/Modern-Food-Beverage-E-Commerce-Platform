@@ -1,14 +1,13 @@
 import Detailbar from '@/components/modules/detailBar/Detailbar'
 import Footer from '@/components/modules/footer/Footer'
-import Navbar from '@/components/modules/navbar/Navbar'
-
 import NewsLetter from '@/components/templates/products/NewsLetter'
 import Image from 'next/image'
+
 const page = () => {
   return (
     <>
       <div className="w-full bg-black h-[100px]">
-        {/* <Navbar /> */}
+      
       </div>
       <Detailbar />
 
@@ -24,7 +23,7 @@ const page = () => {
           className="mt-10"
           width={405}
           height={64}
-           alt='pic'
+          alt='pic'
         />
 
         <div className="w-[85%] mt-10 h-[411px] bg-[#f1f1f1] rounded-[5px]">

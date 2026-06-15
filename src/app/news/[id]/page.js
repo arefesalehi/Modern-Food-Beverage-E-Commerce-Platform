@@ -6,22 +6,22 @@ import NewsDetail from "@/components/templates/news/NewsDetail"
 import connectToDB from "@/configs/db"
 import newsModel from '@/models/news'
 
-const page = async({params}) => {
+const page = async ({ params }) => {
   connectToDB()
- const newsID = params.id
-   const newses = await newsModel.findOne({_id:newsID})
-   console.log('newsesssssssssss=>', newses);
-   
+  const newsID = params.id
+  const newses = await newsModel.findOne({ _id: newsID })
+
+
 
   return (
     <>
-     <div className='w-full bg-black h-[100px]'>
-    {/* <Navbar /> */}
-    </div>
-    <Detailbar/>
-    <BreadCrumb/>
-    <NewsDetail newses={JSON.parse(JSON.stringify(newses))}/>
-   <Footer/>
+      <div className='w-full bg-black h-[100px]'>
+      {/* <Navbar /> */}
+      </div>
+      <Detailbar />
+      <BreadCrumb />
+      <NewsDetail newses={JSON.parse(JSON.stringify(newses))} />
+      <Footer />
 
 
     </>

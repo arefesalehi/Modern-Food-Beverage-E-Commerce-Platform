@@ -1,18 +1,17 @@
 import Footer from '@/components/modules/footer/Footer'
 import React from 'react'
-import Navbar from '@/components/modules/navbar/Navbar'
 import Image from 'next/image'
 import Link from 'next/link'
 import { authUser } from '@/utils/serverHelpers'
 
-const notFound = async() => {
+const notFound = async () => {
   const user = await authUser()
   return (
     <>
       <div className='w-full bg-black h-[100px]'>
-    {/* <Navbar  isLogin={user ? true : false}  /> */}
-    </div>
-       <div className="flex justify-center items-center">
+
+      </div>
+      <div className="flex justify-center items-center">
         <Image
           width={500}
           height={400}
@@ -33,7 +32,7 @@ const notFound = async() => {
         </Link>
       </div>
 
-      <Footer/>
+      <Footer />
 
 
     </>

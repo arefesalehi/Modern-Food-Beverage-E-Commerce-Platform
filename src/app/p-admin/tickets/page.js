@@ -5,10 +5,7 @@ import ticketModel from '@/models/ticket'
 import Titles from '@/components/templates/p-admin/Titles'
 const page = async () => {
 
-
-    const tickets = await ticketModel.find({isAnswer:false}).populate('department').populate('user').lean()
-    console.log('ticketsssssss=>', tickets);
-    
+    const tickets = await ticketModel.find({ isAnswer: false }).populate('department').populate('user').lean()
 
 
     return (

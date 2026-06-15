@@ -1,6 +1,5 @@
 import BreadCrumb from '@/components/modules/BreadCrumb/BreadCrumb'
 import Detailbar from '@/components/modules/detailBar/Detailbar'
-import Navbar from '@/components/modules/navbar/Navbar'
 import productModel from '@/models/product'
 import ProductDetail from '@/components/templates/products/Detail/productDetail'
 import React from 'react'
@@ -17,7 +16,6 @@ const page = async({params}) => {
   return (
     <>
     <div className='w-full bg-black h-[100px]'>
-    {/* <Navbar /> */}
     </div>
     <Detailbar/>
     <BreadCrumb  products={JSON.parse(JSON.stringify(product))}  />

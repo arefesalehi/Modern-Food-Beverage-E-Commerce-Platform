@@ -9,17 +9,13 @@ import SaleChart from '@/components/templates/p-admin/SaleChart'
 import GrowthChart from '@/components/templates/p-admin/GrowthChart'
 import BarChart from '@/components/templates/p-admin/BarChart'
 
-const page =async () => {
+const page = async () => {
 
-connectToDB()
+  connectToDB()
   const tickets = await ticketModel.find().lean()
   const products = await productModel.find().lean()
   const users = await userModel.find().lean()
 
-   
-
-
- 
 
   return (
     <>
@@ -37,21 +33,21 @@ connectToDB()
               <div className="w-full h-[450px] bg-green-100">
                 <span>امار فروش</span>
 
-                <SaleChart/>
+                <SaleChart />
               </div>
             </div>
             <div className="w-1/3 ml-5">
               {' '}
               <div className="w-full h-[450px] bg-green-200">
                 <span> نرخ فروش</span>
-                <GrowthChart/>
+                <GrowthChart />
               </div>
             </div>
             <div className="w-1/3">
               {' '}
               <div className="w-full h-[450px] bg-green-100">
                 <span>نمودار میله ای </span>
-                <BarChart/>
+                <BarChart />
               </div>
             </div>
           </div>

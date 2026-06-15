@@ -17,7 +17,6 @@ const page = async () => {
   await connectToDB()
   const user = await authUser()
 
-  console.log('wishlist User=>', user)
   if (user) {
     wishes = await wishlistModel
       .find({ user: user._id })
@@ -25,13 +24,13 @@ const page = async () => {
       .lean()
 
   }
-  console.log('wishesssssssssss=>', wishes)
+ 
 
   return (
     <>
     <ShoppingMenue/>
       <div className="w-full bg-black h-[100px]">
-        {/* <Navbar isLogin={ user ? true : false}  /> */}
+  
       </div>
       <Detailbar  />
       <AllBreadCrumb route="لیست علاقه مندی ها" />
