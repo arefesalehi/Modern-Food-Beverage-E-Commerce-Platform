@@ -1,13 +1,13 @@
-# 🚀 User Management Dashboard
+# 🚀 # 🛒 FreshCart | Modern Food & Beverage E-Commerce Platform
 
 <div align="center">
 
-# Next.js + Tailwind CSS + MongoDB
+## Next.js + Tailwind CSS + MongoDB
 
-A modern full-stack dashboard with **User Panel** and **Admin Panel**, built using the latest web technologies.
+A modern and scalable full-stack **Food & Beverage E-Commerce Platform** built with Next.js, MongoDB, and Tailwind CSS, featuring a seamless shopping experience for users and a powerful admin dashboard for management.
 
-![Next.js](./public/screenshots/Capture.PNG)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
 ![MongoDB](https://img.shields.io/badge/MongoDB-6-47A248?logo=mongodb)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -16,190 +16,84 @@ A modern full-stack dashboard with **User Panel** and **Admin Panel**, built usi
 
 ---
 
-## 📸 Preview
+## 📸 Live Preview
 
-### Landing Page
+> 📌 Replace images with real screenshots or GIF demo for best impact
 
-![Landing Page](https://via.placeholder.com/1400x800?text=Landing+Page)
+### 🏠 Landing Page
+![Next.js](./public/screenshots/11.png)
 
-### User Dashboard
+![Next.js](./public/screenshots/12.png)
 
-![User Dashboard](https://via.placeholder.com/1400x800?text=User+Dashboard)
+![Next.js](./public/screenshots/13.png)
 
-### Admin Dashboard
+![Next.js](./public/screenshots/14.png)
 
-![Admin Dashboard](https://via.placeholder.com/1400x800?text=Admin+Dashboard)
+![Next.js](./public/screenshots/15.png)
+
+### 👤 User Dashboard
+![Next.js](./public/screenshots/screencapture-localhost-3000-p-user-2026-06-16-12_17_58.png)
+
+### 🛡️ Admin Dashboard
+![Next.js](./public/screenshots/screencapture-localhost-3000-p-admin-2026-06-16-12_16_10.png)
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 ### 👤 User Panel
-
-- Secure Authentication (JWT)
+- Secure Authentication (JWT-based)
 - User Profile Management
-- Change Password
-- Personal Dashboard
-- Account Settings
-- Responsive UI
-- Dark Mode Support
+- Edit personal information
+- Password change functionality
+- Responsive UI (Mobile-first)
+- Dark / Light mode support
 
 ### 🛡️ Admin Panel
-
-- User Management
 - Role-Based Access Control (RBAC)
-- Dashboard Analytics
-- Content Management
-- Search & Filtering
-- Activity Monitoring
-- Admin Settings
+- User management (Create / Edit / Delete)
+- System analytics dashboard
+- Search & filtering system
+- Activity monitoring
+- Admin settings panel
 
 ---
 
 ## 🏗 Tech Stack
 
-| Category | Technology |
-|-----------|------------|
-| Frontend | Next.js, React |
+| Layer | Technology |
+|------|------------|
+| Frontend | Next.js (App Router), React |
 | Styling | Tailwind CSS |
 | Backend | Next.js API Routes |
-| Database | MongoDB |
-| ODM | Mongoose |
-| Authentication | JWT |
+| Database | MongoDB + Mongoose |
+| Auth | JWT Authentication |
 | Deployment | Vercel / VPS |
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Architecture
 
 ```bash
 src/
 ├── app/
+│   ├── (auth)/
 │   ├── dashboard/
 │   ├── admin/
-│   ├── login/
-│   └── register/
+│   └── api/
 │
 ├── components/
 │   ├── ui/
 │   ├── layout/
-│   └── dashboard/
+│   └── shared/
 │
 ├── lib/
-│   ├── mongodb.ts
+│   ├── db.ts
 │   ├── auth.ts
-│   └── helpers.ts
+│   └── utils.ts
 │
 ├── models/
-│   └── User.ts
+│   └── User.model.ts
 │
 ├── middleware.ts
 └── public/
-```
-
----
-
-## 🔐 Authentication & Authorization
-
-```text
-Guest
- ├─ Register
- └─ Login
-
-User
- ├─ Dashboard
- ├─ Profile
- └─ Settings
-
-Admin
- ├─ Users Management
- ├─ Analytics
- ├─ Content Management
- └─ System Settings
-```
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env.local` file:
-
-```env
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
-
----
-
-## 🚀 Getting Started
-
-### Clone Repository
-
-```bash
-git clone https://github.com/yourusername/project-name.git
-```
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Run Development Server
-
-```bash
-npm run dev
-```
-
-Open:
-
-```bash
-http://localhost:3000
-```
-
----
-
-## 📈 Future Improvements
-
-- Email Verification
-- Two-Factor Authentication
-- Notifications System
-- Audit Logs
-- Multi-language Support
-- Advanced Analytics
-
----
-
-## 🌟 Why This Project?
-
-This project demonstrates:
-
-- Full-Stack Development
-- Authentication & Authorization
-- MongoDB Integration
-- Scalable Folder Structure
-- Modern UI/UX Design
-- Production-Ready Architecture
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## 📄 License
-
-MIT License
-
----
-
-<div align="center">
-
-### ⭐ If you like this project, give it a star on GitHub!
-
-Made with ❤️ using Next.js & MongoDB
-
-</div>
